@@ -1,0 +1,10 @@
+post http://localhost:3000/send-info
+
+Content-Type: application/json
+
+{
+    "name": "kelvin",
+    "indexNumber": "1",
+    "id": "1",
+    "phone": "1"
+}

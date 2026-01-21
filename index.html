@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Groups</title>
+  <style>
+    * {
+      font: 100%;
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      border: none;
+      width: 100%;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      padding-top: 4rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      min-width: 60vw;
+      row-gap: 0.25rem;
+      padding-top: 2rem;
+    }
+
+    input {
+      padding: 0.5rem;
+      border-radius: 10px;
+      border: 1px solid black;
+    }
+
+    #submit-btn, #reset-btn {
+      background-color: rgba(0, 0, 255, 0.979);
+      color: white;
+      font-size: 1rem;
+      border: none;
+    }
+     #submit-btn {
+      background-color: rgba(0, 0, 255, 0.979);
+      color: white;
+     }
+
+      #reset-btn {
+      color: rgba(0, 0, 255, 0.979);
+      background-color: white;
+      border: 0.05rem solid rgba(0, 0, 255, 0.979);
+      }
+
+      header {
+        position: fixed;
+        top: 0;
+        height: 3rem;
+        display: flex;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+      }
+
+      img {
+        padding-top: 2px;
+        width: 50px;
+      }
+
+      .members {
+        border: 1px solid rgba(0, 0, 255, 0.979);
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 2rem;
+      }
+
+      h3 {
+        text-align: center;
+        border-bottom: 1px solid rgba(0, 0, 255, 0.979);
+        font-weight: 600;
+        color: rgba(0, 0, 255, 0.979);
+        font-size: medium;
+        padding: 0.25rem;
+      }
+
+      .member-info {
+        padding: 1rem;
+      }
+
+      main {
+        min-width: 200px;
+        max-width: 800px;
+        justify-self: center;
+        padding: 1rem;
+      }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <img src="heisck-logo.png" alt="creator-logo">
+      <span>@heisck codes</span>
+    </header>
+    <div class="members">
+      <h3>Group : 1 members</h3>
+      <div class="member-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, tenetur, sed ex beatae dicta eos non commodi sint accusantium magnam magni officia, reiciendis quas deleniti quo placeat vero suscipit temporibus?</div>
+    </div>
+    <h4  style="text-align: center;">
+      please fill the info below, submit to view group members
+    </h4>
+    <form>
+      <input type="text"   placeholder="full name"         name="name"         class="input-info" autocomplete="name" required>
+      <input type="number" placeholder="index number" name="index-number" class="input-info" autocomplete="index-number" required>
+      <input type="number" placeholder="student id"           name="id"           class="input-info" autocomplete="id" required>
+      <input type="number" placeholder="Whatsapp or phone number"        name="tel"        class="input-info" autocomplete="tel" required>
+      <input type="submit"  id="submit-btn">
+      <input type="reset"   id="reset-btn">
+    </form>
+  </main>
+  
+  
+
+  <script type="module" src="index.js"></script>
+  <script type="module" src="send.js"></script>
+</body>
+</html>
