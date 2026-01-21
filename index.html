@@ -38,6 +38,13 @@
       color: white;
       font-size: 1rem;
       border: none;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+
+    #submit-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
     }
      #submit-btn {
       background-color: rgba(0, 0, 255, 0.979);
@@ -72,6 +79,16 @@
         flex-direction: column;
         justify-content: space-around;
         margin-bottom: 2rem;
+        min-height: 100px;
+      }
+
+      .members h3[style*="color: red"] {
+        background-color: #ffe6e6;
+        padding: 1rem;
+      }
+
+      .members .member-info[style*="color: red"] {
+        background-color: #fff0f0;
       }
 
       h3 {
@@ -102,8 +119,8 @@
       <span>@heisck codes</span>
     </header>
     <div class="members">
-      <h3>Group : 1 members</h3>
-      <div class="member-info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, tenetur, sed ex beatae dicta eos non commodi sint accusantium magnam magni officia, reiciendis quas deleniti quo placeat vero suscipit temporibus?</div>
+      <h3>Group Members</h3>
+      <div class="member-info">Submit the form below to register and see your group members</div>
     </div>
     <h4  style="text-align: center;">
       please fill the info below, submit to view group members
