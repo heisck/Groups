@@ -45,6 +45,9 @@ Prisma.NullTypes = NullTypes;
  * Enums
  */
 exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
+    ReadUncommitted: 'ReadUncommitted',
+    ReadCommitted: 'ReadCommitted',
+    RepeatableRead: 'RepeatableRead',
     Serializable: 'Serializable'
 });
 exports.Prisma.UserScalarFieldEnum = {
@@ -58,6 +61,10 @@ exports.Prisma.UserScalarFieldEnum = {
 exports.Prisma.SortOrder = {
     asc: 'asc',
     desc: 'desc'
+};
+exports.Prisma.QueryMode = {
+    default: 'default',
+    insensitive: 'insensitive'
 };
 exports.Prisma.NullsOrder = {
     first: 'first',
@@ -73,8 +80,8 @@ const config = {
     "previewFeatures": [],
     "clientVersion": "7.2.0",
     "engineVersion": "0c8ef2ce45c83248ab3df073180d5eda9e8be7a3",
-    "activeProvider": "sqlite",
-    "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\ngenerator client {\n  provider      = \"prisma-client-js\"\n  output        = \"../generated/prisma\"\n  isTypeOnly    = false\n  binaryTargets = [\"native\"]\n}\n\ndatasource db {\n  provider = \"sqlite\"\n}\n\nmodel User {\n  id           Int     @id @default(autoincrement())\n  index_Number Int     @unique\n  student_ID   Int     @unique\n  phone_number Int     @unique\n  name         String?\n  Group        Int\n}\n"
+    "activeProvider": "postgresql",
+    "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\ngenerator client {\n  provider      = \"prisma-client-js\"\n  output        = \"../generated/prisma\"\n  isTypeOnly    = false\n  binaryTargets = [\"native\"]\n}\n\ndatasource db {\n  provider = \"postgresql\"\n}\n\nmodel User {\n  id           Int     @id @default(autoincrement())\n  index_Number Int     @unique\n  student_ID   Int     @unique\n  phone_number Int     @unique\n  name         String?\n  Group        Int\n}\n"
 };
 config.runtimeDataModel = JSON.parse("{\"models\":{\"User\":{\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"index_Number\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"student_ID\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"phone_number\",\"kind\":\"scalar\",\"type\":\"Int\"},{\"name\":\"name\",\"kind\":\"scalar\",\"type\":\"String\"},{\"name\":\"Group\",\"kind\":\"scalar\",\"type\":\"Int\"}],\"dbName\":null}},\"enums\":{},\"types\":{}}");
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel);
