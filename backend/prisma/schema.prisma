@@ -2,8 +2,10 @@
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
+  provider      = "prisma-client-js"
+  output        = "../generated/prisma"
+  isTypeOnly    = false
+  binaryTargets = ["native"]
 }
 
 datasource db {
@@ -18,4 +20,3 @@ model User {
   name  String?
   Group Int
 }
-

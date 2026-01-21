@@ -1,6 +1,6 @@
 import express from "express";
 import cors from 'cors'
-import { handleAddStudent } from "./script.ts";
+import { handleAddStudent } from "./script.js";
 
 const app = express()
 const port = 55000
@@ -25,5 +25,3 @@ app.post('/send-info', async (req, res) => {
 app.listen(port, () => {
   console.log(`listening on port ${port}`)
 })
-
-

@@ -1,5 +1,5 @@
-import { GroupFinder } from './find.ts'
-import { prisma } from './lib/prisma.ts'
+import { GroupFinder } from './find.js'
+import { prisma } from './lib/prisma.js'
 
 interface StudentInfo {
   name: string;

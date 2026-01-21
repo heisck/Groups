@@ -4,7 +4,7 @@
   "description": "",
   "main": "backend.ts",
   "scripts": {
-    "dev": "npx ts-node backend.ts",
+    "dev": "npm run build && node dist/backend.js",
     "start": "node backend.ts",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
